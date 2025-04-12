@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
+import mongoose from 'mongoose';
+import jwt from 'jsonwebtoken';
+import bcrypt from 'bcryptjs';
 
 const userSchema = new mongoose.Schema(
   {
@@ -19,29 +19,33 @@ const userSchema = new mongoose.Schema(
     },
     profilePic: {
       type: String,
-      default: "",
+      default: '',
     },
   },
   { timestamps: true }
 );
 
+// Instance method
 userSchema.methods.generateAuthToken = function () {
   const payload = {
     _id: this._id,
     email: this.email,
     fullname: this.fullname,
     profilePic: this.profilePic,
-    // Add more if needed
   };
 
-  return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "7d" });
+  return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '7d' });
 };
+
 userSchema.methods.matchPassword = function (password) {
   return bcrypt.compare(password, this.password);
 };
 
+// Static method
 userSchema.statics.hashPassword = async function (password) {
   return bcrypt.hash(password, 10);
 };
 
-module.exports = mongoose.model("user", userSchema);
+const User = mongoose.model('user', userSchema);
+
+export default User;
