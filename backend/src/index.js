@@ -20,7 +20,6 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://fullstack-chat-app-sruz.onrender.com/",
     ],
     credentials: true,
   })
