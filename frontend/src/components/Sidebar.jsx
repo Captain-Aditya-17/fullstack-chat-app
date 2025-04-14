@@ -38,7 +38,7 @@ const Sidebar = () => {
           >
             <div className="relative mx-auto lg:mx-0">
               <img
-                src={user.profilePic || "https://i.pinimg.com/736x/89/c9/1c/89c91c2b9af40c33d16afe77cc0b9a4d.jpg"}
+                src={user.profilePic || "https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"}
                 alt={user.fullname}
                 className="size-12 object-cover rounded-full"
               />

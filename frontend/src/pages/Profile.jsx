@@ -34,7 +34,7 @@ const Profile = () => {
       <div className="flex flex-col items-center gap-4">
             <div className="relative">
               <img
-                src={authUser.profilePic}
+                src={authUser.profilePic || selectedImg || "/https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"}
                 alt="Profile"
                 className="size-32 rounded-full object-cover border-4 "
               />

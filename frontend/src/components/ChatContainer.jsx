@@ -53,9 +53,9 @@ const ChatContainer = () => {
                   src={
                     message.senderId === authUser._id
                       ? authUser.profilePic ||
-                        "https://i.pinimg.com/236x/fa/d8/48/fad8484473d1e2a141d0719a24c37295.jpg"
+                        "https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"
                       : selectedUser.profilePic ||
-                        "https://i.pinimg.com/236x/fa/d8/48/fad8484473d1e2a141d0719a24c37295.jpg"
+                        "https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"
                   }
                   alt=""
                 />

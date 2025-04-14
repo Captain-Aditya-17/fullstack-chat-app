@@ -15,7 +15,7 @@ const ChatHeader = () => {
           {/* Avatar */}
           <div className="avatar">
             <div className="size-10 rounded-full relative">
-              <img src={selectedUser.profilePic || "https://i.pinimg.com/736x/89/c9/1c/89c91c2b9af40c33d16afe77cc0b9a4d.jpg"} alt={selectedUser.fullname} />
+              <img src={selectedUser.profilePic || "https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"} alt={selectedUser.fullname} />
             </div>
           </div>
 
